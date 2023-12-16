@@ -4,7 +4,7 @@ public class SettleUpCommand implements Command{
 
     @Override
     public boolean matches(String input) {
-        return getCommand(input).equals(Commands.SETTLE_UP_COMMAND);      
+        return Command.getCommand(input).equals(Commands.SETTLE_UP_COMMAND);
     }
 
     @Override
