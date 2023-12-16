@@ -21,7 +21,9 @@ public class CreateUserCommand implements Command {
     }
 
     @Override
+    // command: register name email password
     public void execute(String input) {
+
         System.out.println("Executing User create command");
         List<String> tokens = Command.getTokens(input);
 
