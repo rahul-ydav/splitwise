@@ -6,7 +6,6 @@ import com.example.splitwise.models.User;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.sql.SQLOutput;
 import java.util.List;
 
 @AllArgsConstructor
