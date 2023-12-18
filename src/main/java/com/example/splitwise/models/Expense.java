@@ -1,13 +1,13 @@
 package com.example.splitwise.models;
 
 import com.example.splitwise.enums.ExpenseStatus;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -19,8 +19,14 @@ import java.util.List;
 public class Expense extends BaseModel {
     private String description;
     private double amount;
+
+    @ManyToMany
+    @Builder.Default
+    private List<User> users = new ArrayList<>();
+    
     @OneToMany(mappedBy = "expense")
     private List<UserExpense> paidBy;
+    
     @OneToMany(mappedBy = "expense")
     private List<UserExpense> owedBy;
 

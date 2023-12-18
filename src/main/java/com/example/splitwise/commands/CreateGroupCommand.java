@@ -23,7 +23,7 @@ public class CreateGroupCommand implements Command {
     @Override
     public void execute(String input) {
         List<String> tokens = Command.getTokens(input);
-        List<Long> memberIds = Arrays.stream(tokens.get(3).split(" ")).map(Long::valueOf).toList();
+        List<Long> memberIds = Arrays.stream(tokens.get(3).split(",")).map(Long::valueOf).toList();
 
         CreateGroupRequest request = CreateGroupRequest.builder()
             .name(tokens.get(1))

@@ -9,7 +9,10 @@ import com.example.splitwise.models.Group;
 import com.example.splitwise.models.User;
 import com.example.splitwise.repositories.GroupRepositroy;
 
+import lombok.AllArgsConstructor;
+
 @Service
+@AllArgsConstructor
 public class GroupService {
     private UserService userService;
     private GroupRepositroy groupRepository;
