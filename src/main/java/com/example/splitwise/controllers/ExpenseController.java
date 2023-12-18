@@ -1,5 +1,7 @@
 package com.example.splitwise.controllers;
 
+import com.example.splitwise.dtos.CreateUserExpenseRequest;
+import com.example.splitwise.models.UserExpense;
 import org.springframework.stereotype.Controller;
 
 import com.example.splitwise.dtos.CreateExepnseRequest;
@@ -16,5 +18,9 @@ public class ExpenseController {
     
     public Expense createExepnse(CreateExepnseRequest request) {
         return expenseService.createExpense(request);
+    }
+
+    public UserExpense addUserExpense(CreateUserExpenseRequest request) {
+        return expenseService.addUserExpense(request);
     }
 }
