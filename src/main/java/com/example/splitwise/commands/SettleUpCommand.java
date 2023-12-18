@@ -1,5 +1,10 @@
 package com.example.splitwise.commands;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
+
+@AllArgsConstructor
+@Component
 public class SettleUpCommand implements Command{
 
     @Override

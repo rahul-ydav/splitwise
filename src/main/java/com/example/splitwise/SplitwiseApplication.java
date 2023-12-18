@@ -19,7 +19,7 @@ public class SplitwiseApplication implements CommandLineRunner {
     public SplitwiseApplication(CommandExecutor commandExecutor, List<Command> command) {
         this.scanner = new Scanner(System.in);
         this.commandExecutor = commandExecutor;
-        this.commandExecutor.addCommand(command);
+        this.commandExecutor.addCommands(command);
     }
 
     public static void main(String[] args) {

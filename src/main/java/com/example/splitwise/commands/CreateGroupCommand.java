@@ -6,7 +6,11 @@ import java.util.List;
 import com.example.splitwise.controllers.GroupController;
 import com.example.splitwise.dtos.CreateGroupRequest;
 import com.example.splitwise.models.Group;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@AllArgsConstructor
+@Component
 public class CreateGroupCommand implements Command {
 
     GroupController groupController;
