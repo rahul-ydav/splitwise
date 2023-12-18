@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.example.splitwise.dtos.CreateExepnseRequest;
+import com.example.splitwise.enums.ExpenseStatus;
 import com.example.splitwise.models.Expense;
 import com.example.splitwise.models.User;
 import com.example.splitwise.repositories.ExepnseRepository;
@@ -24,8 +25,9 @@ public class ExpenseService {
         Expense expense = Expense.builder()
             .amount(request.getAmount())
             .description(request.getDescription())
+            .status(ExpenseStatus.PENDING)
             .users(users)
-                .build();
+            .build();
         
         return exepnseRepository.save(expense);
     }
