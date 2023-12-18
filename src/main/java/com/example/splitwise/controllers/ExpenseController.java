@@ -1,6 +1,8 @@
 package com.example.splitwise.controllers;
 
+import com.example.splitwise.dtos.CreateGroupExpenseRequest;
 import com.example.splitwise.dtos.CreateUserExpenseRequest;
+import com.example.splitwise.models.GroupExpense;
 import com.example.splitwise.models.UserExpense;
 import org.springframework.stereotype.Controller;
 
@@ -22,5 +24,10 @@ public class ExpenseController {
 
     public UserExpense addUserExpense(CreateUserExpenseRequest request) {
         return expenseService.addUserExpense(request);
+    }
+
+    public GroupExpense createGroupExpense(CreateGroupExpenseRequest request){
+
+        return expenseService.createGroupExpense(request);
     }
 }
