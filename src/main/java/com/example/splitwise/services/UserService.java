@@ -12,8 +12,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
     private UserRepository userRepository;
+    private PasswordEncoder encoder;
 
-    public User createUser(User user) {
+    public User createUser(User request) {
+        String hashPassword = encoder.encode(request.getPassword());
+        User user = request.toBuilder().password(hashPassword).build();
         return userRepository.save(user);
     }
     
