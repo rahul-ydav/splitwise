@@ -1,7 +1,6 @@
 package com.example.splitwise.services;
 
 import com.example.splitwise.models.User;
-import com.example.splitwise.models.UserExpense;
 import com.example.splitwise.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 
